@@ -1,0 +1,29 @@
+Challenge #2
+Summary
+We need to write code that will query the meta data of an instance within aws and provide a json formatted output. The choice of language and implementation is up to you.
+
+Solution - Please find below command to retrieve meta data of an instance in json format -
+
+curl --silent http://169.254.169.254/latest/dynamic/instance-identity/document
+
+output - 
+
+ec2-user:~/environment/ecsdemo-nodejs (master) $ curl --silent http://169.254.169.254/latest/dynamic/instance-identity/document
+{
+  "accountId" : "644794406255",
+  "architecture" : "x86_64",
+  "availabilityZone" : "us-west-2b",
+  "billingProducts" : null,
+  "devpayProductCodes" : null,
+  "marketplaceProductCodes" : null,
+  "imageId" : "ami-00faa4d0d4623ec8e",
+  "instanceId" : "i-0b21cbb77b49df233",
+  "instanceType" : "t2.micro",
+  "kernelId" : null,
+  "pendingTime" : "2020-02-10T11:27:57Z",
+  "privateIp" : "172.31.55.92",
+  "ramdiskId" : null,
+  "region" : "us-west-2",
+  "version" : "2017-09-30"
+}
+ec2-user:~/environment/ecsdemo-nodejs (master) $ 
